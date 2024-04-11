@@ -1,0 +1,33 @@
+body, html { 
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+    font-family: Arial, sans-serif;
+}
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+#container { 
+    display: flex;
+    height: calc(100vh - 100px); /* Adjust height considering header */
+}
+#map { 
+    flex: 3; /* Takes up 3/4 of the space */
+    height: 100%;
+}
+#info-box {
+    flex: 1; /* Takes up 1/4 of the space */
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-left: 2px solid #ccc;
+}
+.marker {
+    background-color: rgb(255, 153, 0);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
