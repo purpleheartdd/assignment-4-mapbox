@@ -1,33 +1,110 @@
-body, html { 
-    margin: 0; 
-    padding: 0; 
-    height: 100%; 
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* Stack header, tabs, and container vertically */
 }
+
 .header {
     text-align: center;
     padding: 20px;
     background-color: #f4f4f4;
 }
-#container { 
-    display: flex;
-    height: calc(100vh - 100px); /* Adjust height considering header */
+
+.tabs {
+    text-align: center;
+    /* Center aligns the buttons */
+    margin: 20px 0;
+    /* Spacing from the header */
+    width: 100%;
+    /* Ensure tabs take full width */
 }
-#map { 
-    flex: 3; /* Takes up 3/4 of the space */
+
+.tab {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    /* Align buttons inline */
+    margin: 0 5px;
+    /* Space between buttons */
+}
+
+#container {
+    display: flex;
+    height: calc(100vh - 100px);
+    /* Adjust height considering header and tabs */
+}
+
+#map {
+    flex: 3;
+    /* Takes up 3/4 of the space */
     height: 100%;
 }
+
 #info-box {
-    flex: 1; /* Takes up 1/4 of the space */
+    flex: 1;
+    /* Takes up 1/4 of the space */
     padding: 10px;
     overflow-y: auto;
     background-color: #fff;
     border-left: 2px solid #ccc;
+    width: auto;
+    /* Auto width for flexible adjustment */
 }
+
 .marker {
-    background-color: rgb(255, 153, 0);
+    background-color: rgb(132, 0, 255);
     border-radius: 50%;
     width: 10px;
     height: 10px;
     cursor: pointer;
+}
+
+.marker.Must Go {
+    background-color: rgb(132, 0, 255);
+}
+
+.marker.Parks {
+    background-color: green;
+}
+
+.marker.Restaurants {
+    background-color: blue;
+}
+
+
+
+.my-popup .mapboxgl-popup-content {
+    width: 200px;
+    /* Fixed width */
+    max-height: 200px;
+    /* Fixed maximum height */
+    overflow-y: auto;
+    /* Enables vertical scrolling */
+    font-family: Arial, sans-serif;
+}
+
+.popup-content img {
+    max-width: 100%;
+    /* Ensures image does not exceed the popup width */
+    height: auto;
+    /* Maintains aspect ratio */
+}
+
+.popup-content h3,
+.popup-content p {
+    margin: 10px 0;
+    /* Adds some spacing around text for better readability */
+}
+
+.popup-content {
+    padding: 10px;
+    /* Padding inside the popup */
 }

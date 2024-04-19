@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Explore NYC Points of Interest</title>
+    <title>Welcome to Your Interactive New York City Tour Guide</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
@@ -13,8 +13,17 @@
 <body>
     <div class="header">
         <h1>Welcome to Your Interactive New York City Tour Guide</h1>
-        <p>Explore various historical sites and museums in NYC. Click on the dots for more details!</p>
+        <p>Explore various popular palces in NYC! First Select the catrgory you are intersted to visit listed below and then Click on the dots for more details!</p>
     </div>
+    </div>
+    <div class="tabs">
+        <button class="tab" onclick="changeCategory('Must Go')">Must Go</button>
+        <button class="tab" onclick="changeCategory('Parks')">Parks</button>
+        <button class="tab" onclick="changeCategory('Restaurants')">Restaurants</button>
+        <button class="tab" onclick="showAll()">Show All</button>
+    </div>
+    
+
     <div id="container">
         <div id="map"></div>
     </div>
